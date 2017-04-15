@@ -1,3 +1,7 @@
 $(function() {
-    console.log('hello');
+	function bounce () {
+		$(this).toggleClass( 'bounce' );
+	}
+
+    $('.thing').on( 'click', bounce );
 });

@@ -5,6 +5,15 @@ html {
 	font-size: 62.5%;
 }
 
+@keyframes bounce {
+    0%   {top: 0;}
+    20%  {top: 50rem;}
+    40%  {top: 30rem;}
+    60%  {top: 50rem;}
+    80%	 {top: 40rem;}
+    100% {top: 50rem;}
+}
+
 main {
 	background-color: #eee;
 	max-width: 70rem;
@@ -14,11 +23,20 @@ main {
 
 .sandbox {
 	display: flex;
+	height: 50rem;
 	justify-content: space-around;
 }
 
 .thing {
+	position: relative;
 	background-color: blue;
+	border-radius: 50%;
 	height: 5rem;
 	width: 5rem;
+}
+
+.thing.bounce {
+	-webkit-animation: bounce 4000ms 1;
+	-moz-animation: bounce 4000ms 1;
+	animation: bounce 4000ms 1;
 }
